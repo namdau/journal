@@ -1,0 +1,16 @@
+{{!< default}}
+<div class="container">
+	<div class="content">
+		{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+		<header class="post-header">
+		    <h1 class="post-title">All posts tagged <span>{{tag.name}}</span></h1>
+		</header>
+
+		{{! The main content area on the homepage }}
+		<div class="wrapper">
+		    {{! The tag below includes the post loop - partials/loop.hbs }}
+		    {{> "loop"}}
+		</div> <!-- #main -->
+	
+	</div>
+</div>

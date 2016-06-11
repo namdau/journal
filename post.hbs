@@ -1,0 +1,64 @@
+{{!< default}}
+
+{{#post}}
+
+<div class="container">
+    <div class="content">
+        <article class="{{post_class}}">
+            <header class="post-header">
+                <section class="post-meta">
+                    <p>
+                        <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                        <span class="dot"></span>
+                        <span class="post-tags">{{tags separator=", "}}</span>
+                    </p>
+                </section>
+                <h1 class="post-title">{{title}}</h1>
+            </header>
+
+            <section class="post-content" id="postContent">
+                {{content}}
+            </section>
+
+            <footer class="post-footer">
+                <section class="share">
+                    <span>Share this post</span>
+                    <a href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        <i class="fa fa-lg fa-twitter-square"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        <i class="fa fa-lg fa-facebook-square"></i>
+                    </a>
+                    <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                        <i class="fa fa-lg fa-google-plus-square"></i>
+                    </a>
+                </section>
+                <div id="disqus_thread"></div>
+                <script>
+               /**
+               * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+               * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+               */
+               var disqus_config = function () {
+                  this.page.url = {{url absolute="true"}}; // Replace PAGE_URL with your page's canonical URL variable
+                  this.page.identifier = {{id}}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+               };
+               (function() { // DON'T EDIT BELOW THIS LINE
+               var d = document, s = d.createElement('script');
+               var disqus_shortname = 'example_shortname';
+               s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+               s.setAttribute('data-timestamp', +new Date());
+               (d.head || d.body).appendChild(s);
+               })();
+               </script>
+               <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </footer>
+        </article>
+    </div> <!-- #main -->  
+</div>
+
+{{/post}}
