@@ -19,7 +19,7 @@ nav {
                     content: '';
                 }
                 a {
-                    font-weight: 300;
+                    font-weight: 600;
                 }
             }
         }
@@ -37,7 +37,7 @@ nav {
 @media only screen and (max-width: 600px) {
     body.nav-opened {
     	.wrapper {
-    	    transform: translate3D(-180px, 0, 0);
+    	    transform: translate3D(-120px, 0, 0);
     	    transition: transform 0.3s ease;
     	}
     	header .main-navigation {
@@ -48,8 +48,8 @@ nav {
     	    right: 0;
     	    bottom: 0;
     	    z-index: 5;
-    	    width: 180px;
-    	    right: -180px;
+    	    width: 120px;
+    	    right: -120px;
     	    transform: translate3D(0, 0, 0);
     	    opacity: 1;
     	    color: #fff;
@@ -62,7 +62,15 @@ nav {
     	    	list-style: none;
     	    	float: left;
     	    	li {
+                    padding: 3px 2px;
     	    		display: block;
+                    &:after {
+                        content: "";
+                        padding: 0;
+                    }
+                    a {
+                        color: $footer_link;
+                    }
     	    	}
     	    }
     	}

@@ -18,7 +18,7 @@ a {
     color: $link;
     text-decoration: none;
     transition: all .3s ease;
-    font-weight: 400;
+    font-weight: 300;
     &:hover {
         color: $header_link;
     }
@@ -45,7 +45,7 @@ a {
         flex: 2;
         .name {
             font-size: 1.5em;
-            text-transform: uppercase;
+            text-transform: capitalize;
             font-weight: 300;
             margin: 0;
             a {
@@ -137,9 +137,9 @@ a {
     .post {
         position: relative;
         border-bottom: 1px solid $border_color;
-        padding-bottom: 2.3em;
+        padding-bottom: 2.1em;
         padding-top: 0;
-        margin: 2.3em 0;
+        margin: 2.1em 0;
         .post-excerpt {
             .read-more {
                 font-size: .8em;
@@ -199,11 +199,11 @@ a {
     margin-top: 40px;
     color: $footer_color;
     background-color: $footer_bg;
-    padding: 20px 0 0;
+    padding: 40px 0 0;
     .footer-heading {
         font-weight: 700;
         letter-spacing: 0.03rem;
-        margin: .6em 0;
+        margin: 0 0 .6em 0;
         font-size: .9em;
     }
     a {
@@ -212,11 +212,9 @@ a {
             color: $footer_color;
         }
     }
-    footer {
-        padding: .6em;
-    }
+
     .links {
-        margin-bottom: 70px;
+        margin-bottom: 30px;
         display: flex;
         flex-direction: row;
         ul, ol {
@@ -278,7 +276,11 @@ a {
     }
 }
 @media only screen and (max-width: 600px) {
+    .home-link {
+        display: none;
+    }
     .header {
+        text-align: center;
         min-height: 40px;
         .title {
             margin: 8px 0;
@@ -293,7 +295,7 @@ a {
         .menu {
             width: 24px;
             height: 12px;
-            margin: 15px auto;
+            margin: 0 auto;
             position: relative;
             transform: rotate(0deg);
             transition: .5s ease-in-out;
@@ -304,7 +306,7 @@ a {
                 position: absolute;
                 height: 2px;
                 width: 100%;
-                background: #fff;
+                background: $header_link;
                 border-radius: 6px;
                 opacity: 1;
                 left: 0;
@@ -331,11 +333,7 @@ a {
                 }
                 span:nth-child(3) {
                     transform: rotate(-45deg);
-                }
-                span:nth-child(4) {
                     top: 6px;
-                    width: 0%;
-                    left: 50%;
                 }
             }
         }
@@ -361,6 +359,18 @@ a {
         width: auto;
         margin-left: 20px;
         margin-right: 20px;
+    }
+    .footer {
+        padding: 30px 0 0;
+        .links {
+            flex-direction: column;
+            .footer-heading {
+                margin: 0;
+            }
+            .follow, .recent {
+                margin-bottom: 20px;
+            }
+        }
     }
 }
 
