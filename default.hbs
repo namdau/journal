@@ -16,14 +16,13 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <meta property="og:url" content="{{@blog.url}}">
         <meta property="og:type" content="article">
-        <meta property="og:title" content="{{meta_title}}">  
+        <meta property="og:title" content="{{meta_title}}">
         <meta property="og:description" content="{{meta_description}}">
         <meta property="og:site_name" content="{{@blog.title}}">
 
         {{! Styles'n'Scripts }}
         <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}" />
-        <link href='https://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,900' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 
         {{! Ghost outputs important style and meta data with this tag }}
         {{ghost_head}}
@@ -33,24 +32,45 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="wrapper">
+            <header id="header" class="header">
+                <div class="container">
+                    <div class="page-title">
+                        <h1 class="name"><a href="#">{{@blog.title}}</a></h1>
+                        <p class="desc">{{@blog.description}}</p>
+                    </div>
+                    {{navigation}}
+                    <a href="#" class="menu" id="toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </header>
+
             <a href="{{@blog.url}}" class="home-link"><i class="fa fa-lg fa-home" aria-hidden="true"></i></a>
-            {{{body}}}
+
+            <div class="container">
+                <main class="content" role="main">
+                    {{{body}}}
+                </main>
+            </div>
         </div>
 
         <div class="footer">
             <footer class="container">
                 <div class="links">
                     <div class="follow">
-                        <h4>Follow Me</h4>
-                        <ul>
+                        <h5 class="footer-heading">Follow Me</h5>
+                        <ul class="social">
                             {{! Put your links here }}
-                            <li><a href="#">Github</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Linkedin</a></li>
+                            <li><a href="#"><i class="fa fa-lg fa-github"></i></a></li>
+                            <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
                         </ul>
                     </div>
                     <div class="follow">
-                        <h4>Explore</h4>
+                        <h5 class="footer-heading">Explore</h5>
                         <ul>
                             <li><a href="#">External link #1</a></li>
                             <li><a href="#">External link #2</a></li>
@@ -58,7 +78,7 @@
                         </ul>
                     </div>
                     <div class="recent">
-                        <h4>Recent Posts</h4>
+                        <h5 class="footer-heading">Recent Posts</h5>
                         {{#get "posts" limit="5" as |recents|}}
                         <ul>
                             {{#foreach recents}}
@@ -68,10 +88,15 @@
                         {{/get}}
                     </div>
                 </div>
-
-                <div class="copyright">&copy; Copyright {{date format="YYYY"}} by <a href="{{@blog.url}}">{{@blog.title}}</a>. Proudly published with <a href="https://ghost.org">Ghost</a> and <a href="#">Journal</a>.</div>
             </footer>
+
+            <div id="copyright">
+                <div class="container">
+                    <div class="copyright-text">&copy; Copyright {{date format="YYYY"}} by <a href="{{@blog.url}}">{{@blog.title}}</a>. Proudly published with <a href="https://ghost.org">Ghost</a> and <a href="#">Journal</a>.</div>
+                </div>
+            </div>
         </div>
+
 
         {{! Ghost outputs important scripts and data with this tag }}
         {{ghost_foot}}
