@@ -35,7 +35,7 @@
             <header id="header" class="header">
                 <div class="container">
                     <div class="page-title">
-                        <h1 class="name"><a href="#">{{@blog.title}}</a></h1>
+                        <h1 class="name"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
                         <p class="desc">{{@blog.description}}</p>
                     </div>
                     {{navigation}}
@@ -43,7 +43,7 @@
                         <span></span>
                         <span></span>
                         <span></span>
-                        
+
                     </a>
                 </div>
             </header>
@@ -63,7 +63,7 @@
                     <div class="follow">
                         <h5 class="footer-heading">Follow Me</h5>
                         <ul class="social">
-                            {{! Put your links here }}
+                            {{! Put your social media links here }}
                             <li><a href="#"><i class="fa fa-lg fa-github"></i></a></li>
                             <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
@@ -72,6 +72,7 @@
                     <div class="follow">
                         <h5 class="footer-heading">Explore</h5>
                         <ul>
+                            {{! Put your external links here }}
                             <li><a href="#">External link #1</a></li>
                             <li><a href="#">External link #2</a></li>
                             <li><a href="#">External link #3</a></li>
@@ -92,7 +93,7 @@
 
             <div id="copyright">
                 <div class="container">
-                    <div class="copyright-text">&copy; Copyright {{date format="YYYY"}} by <a href="{{@blog.url}}">{{@blog.title}}</a>. Proudly published with <a href="https://ghost.org">Ghost</a> and <a href="#">Journal</a>.</div>
+                    <div class="copyright-text">&copy; Copyright {{date format="YYYY"}} by <a href="{{@blog.url}}">{{@blog.title}}</a>. Proudly published with <a href="//ghost.org">Ghost</a> and <a href="//github.com/namdau/journal">Journal</a>.</div>
                 </div>
             </div>
         </div>
