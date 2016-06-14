@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/namdau/journal"
   },
+  "scripts": {
+    "postinstall": "gulp build"
+  },
   "main": "index.js",
   "keywords": [
     "ghost",

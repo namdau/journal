@@ -13,7 +13,6 @@
         <meta name="description" content="{{meta_description}}">
         <meta name="HandheldFriendly" content="True" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <meta property="og:url" content="{{@blog.url}}">
         <meta property="og:type" content="article">
         <meta property="og:title" content="{{meta_title}}">
@@ -44,7 +43,6 @@
                         <span></span>
                         <span></span>
                         <span></span>
-
                     </a>
                 </div>
             </header>
@@ -63,21 +61,11 @@
                 <div class="links">
                     <div class="follow">
                         <h5 class="footer-heading">Follow Me</h5>
-                        <ul class="social">
-                            {{! Put your social media links here }}
-                            <li><a href="#"><i class="fa fa-lg fa-github"></i></a></li>
-                            <li><a href="#"><i class="fa fa-lg fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-lg fa-linkedin"></i></a></li>
-                        </ul>
+                        {{> "social"}}
                     </div>
                     <div class="follow">
                         <h5 class="footer-heading">Explore</h5>
-                        <ul>
-                            {{! Put your external links here }}
-                            <li><a href="#">External link #1</a></li>
-                            <li><a href="#">External link #2</a></li>
-                            <li><a href="#">External link #3</a></li>
-                        </ul>
+                        {{> "external"}}
                     </div>
                     <div class="recent">
                         <h5 class="footer-heading">Recent Posts</h5>
@@ -94,7 +82,7 @@
 
             <div id="copyright">
                 <div class="container">
-                    <div class="copyright-text">&copy; Copyright {{date format="YYYY"}} by <a href="{{@blog.url}}">{{@blog.title}}</a>. Proudly published with <a href="//ghost.org">Ghost</a> and <a href="//github.com/namdau/journal">Journal</a>.</div>
+                    <div class="copyright-text">&copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>. Proudly published with <a href="//ghost.org">Ghost</a> and <a href="//github.com/namdau/journal">Journal</a>.</div>
                 </div>
             </div>
         </div>

@@ -38,7 +38,7 @@ a {
 .header {
     min-height: 50px;
     border-bottom: 1px solid $border_color;
-    padding: 20px 0 15px;
+    padding: 15px 0;
     margin-bottom: 60px;
     .container {
         display: flex;
@@ -57,7 +57,7 @@ a {
             }
         }
         .desc {
-            margin: 5px 0 0;
+            margin: 2px 0 0;
             font-size: 16px;
             color: $link;
         }
@@ -248,22 +248,20 @@ a {
         }
     }
     #copyright {
-        border-top: 1px solid #266f50;
-        padding: 10px 0;
+        padding: 20px 0 10px;
     }
 }
 
 
 .copyright-text {
-    padding: 7px 0;
-    font-size: 12px;
+    padding: 2px 0;
+    font-size: 11px;
     font-weight: 300;
-    text-align: center;
-    letter-spacing: 0.01rem;
+    text-align: left;
     width: 100%;
     color: $footer_link;
     a {
-        font-weight: 700;
+        font-weight: 400;
     }
 }
 
