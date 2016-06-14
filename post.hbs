@@ -20,7 +20,11 @@
 
                 <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
                 {{#if tags}}
-                on <span class="post-tags">{{tags separator=", "}}</span>
+                on <span class="post-tags">
+                    {{#foreach tags}}
+                      <a href="{{url}}" title="{{name}}" class="tag-{{id}}">#{{name}}</a>
+                    {{/foreach}}
+                </span>
                 {{/if}}
         </section>
     </header>

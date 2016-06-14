@@ -5,15 +5,18 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    line-height: 1.7;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.01rem;
     color: $main_text;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Merriweather', serif;
+}
 a {
     color: $link;
     text-decoration: none;
@@ -95,6 +98,7 @@ a {
                     background-size: cover;
                     border-radius: 100%;
                     text-indent: -9999px;
+                    margin-right: 4px;
                 }
             }
         }
@@ -267,8 +271,8 @@ a {
     position: fixed;
     top: 10px;
     left: 10px;
-    padding: 6px 10px;
-    background: rgba(0, 0, 0, 0.5);
+    padding: 3px 10px 7px;
+    background: $main_text;
     color: $footer_color;
     &:hover {
         color: $footer_color;
