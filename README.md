@@ -1,8 +1,8 @@
 # Journal
 
-Journal is a minimal responsive theme for [Ghost](http://github.com/tryghost/ghost/) which focus on content and features syntax highlighter from [Prism](http://prismjs.com/).
+**Journal** is a minimal responsive theme for [Ghost](http://github.com/tryghost/ghost/) which focus on content and features syntax highlighter from [Prism](http://prismjs.com/).
 
-![Journal](https://raw.githubusercontent.com/namdau/journal/master/screenshot.png)
+![Journal](screenshot.png)
 
 ## Getting Started
 You'll need to have `npm` (bundled with [node](https://nodejs.org/)) and [gulp](http://gulpjs.com/) installed and follow these steps to clone the repository, install all necessary packages and build the assets:
@@ -44,12 +44,12 @@ Open `post.hbs` and find this line
 Replace `example_shortname` with your Disqus shortname
 
 ## Development
-[Journal[(https://github.com/namdau/journal)] uses [gulp](http://gulpjs.com/) as build system and [browser-sync](https://www.browsersync.io) to support synchronised browser testing and live reload, all assets are located at `src` directory and all build output is being put at default `assets` directory.
+**Journal** uses [gulp](http://gulpjs.com/) as build system and [browser-sync](https://www.browsersync.io) to support synchronised browser testing and live reload, all assets are located at `src` directory and build output is set to default `assets` directory.
 
-Run these commands to start
+Fire up your terminal and run these commands before you start making changes:
 
 	cd /your-ghost-blog/content/themes
-	npm start
+	npm install
 	gulp
 
 
