@@ -6,8 +6,9 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
+    //font-family: 'David Libre', serif;
     font-size: 17px;
-    line-height: 1.6;
+    line-height: 1.7;
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.01rem;
@@ -141,14 +142,14 @@ a {
     .post {
         position: relative;
         border-bottom: 1px solid $border_color;
-        padding-bottom: 2.1em;
+        padding-bottom: 1.8em;
         padding-top: 0;
-        margin: 2.1em 0;
+        margin: 1.8em 0;
         .post-excerpt {
             .read-more {
                 font-size: .8em;
             }
-            margin: 1em 0;
+            margin: 0;
         }
         .post-title {
             margin: 0.67em 0 0;
