@@ -4,7 +4,7 @@
   "description": "A minimal content focused theme for Ghost",
   "repository": {
     "type": "git",
-    "url": "https://github.com/namdau/journal"
+    "url": "git@github.com:namdau/journal.git"
   },
   "scripts": {
     "postinstall": "gulp build"
