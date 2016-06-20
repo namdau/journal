@@ -6,8 +6,7 @@ html {
 
 body {
     font-family: 'Roboto', sans-serif;
-    //font-family: 'David Libre', serif;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.7;
     font-weight: 300;
     font-style: normal;
@@ -80,8 +79,9 @@ a {
     .post {
         margin-top: 55px;
         .post-meta {
+            font-family: 'Merriweather', serif;
             margin-top: 15px;
-            font-size: 14px;
+            font-size: 12px;
             font-weight: 300;
             color: $post_meta;
             line-height: 2.2;
@@ -89,8 +89,8 @@ a {
                 margin: 0;
                 float: left;
                 .name:after {
-                    content: "—";
-                    padding: 0 10px;
+                    content: "-";
+                    padding: 0 5px;
                 }
                 a {
                     display: inline-block;
@@ -162,8 +162,9 @@ a {
             }
         }
         .post-meta {
-            font-weight: 400;
-            font-size: 14px;
+            font-family: 'Merriweather', serif;
+            font-weight: 300;
+            font-size: 12px;
             color: $post_meta;
             a {
                 color: $post_meta;
@@ -270,7 +271,7 @@ a {
     position: fixed;
     top: 10px;
     left: 10px;
-    padding: 3px 10px 7px;
+    padding: 3px 8px;
     background: $main_text;
     color: $footer_color;
     &:hover {
