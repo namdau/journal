@@ -2,6 +2,8 @@
 
 **Journal** is a minimal responsive theme for [Ghost](http://github.com/tryghost/ghost/) which focus on content and features syntax highlighter from [Prism](http://prismjs.com/).
 
+I'm using this for my [blog](http://namdau.com/).
+
 ![Journal](screenshot.png)
 
 ## Getting Started
