@@ -50,7 +50,7 @@ Replace `example_shortname` with your Disqus shortname
 
 Fire up your terminal and run these commands before you start making changes:
 
-	cd /your-ghost-blog/content/themes
+	cd /your-ghost-blog/content/themes/journal
 	npm install
 	gulp
 
