@@ -11,7 +11,9 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     sass = require('gulp-sass'),
     browserSync = require('browser-sync'),
-    size = require('gulp-size');
+    size = require('gulp-size'),
+    zip = require('gulp-zip');
+    
 
 var config = {
     proxy: 'localhost:2368',
@@ -75,7 +77,13 @@ gulp.task('default', ['styles', 'scripts', 'fonts', 'images', 'browser-sync'], f
     gulp.watch("*.hbs").on('change', browserSync.reload);
 });
 
-gulp.task('build', ['styles', 'scripts', 'images', 'fonts'], function() {
+gulp.task('zip', function(){
+    gulp.src(['./**', '!node_modules', '!node_modules/**', '!zip', '!zip/**'])
+    .pipe(zip('built.zip'))
+    .pipe(gulp.dest('zip'))
+})
+
+gulp.task('build', ['styles', 'scripts', 'images', 'fonts', 'zip'], function() {
     return gulp.src(['src/**/*.*']).pipe(size({
         title: 'build',
         gzip: true

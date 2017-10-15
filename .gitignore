@@ -1,3 +1,8 @@
 node_modules/
 assets/
 npm-debug.log
+zip/
+
+\.DS_Store
+
+*.zip
