@@ -7,16 +7,16 @@
         <h1 class="post-title">{{title}}</h1>
         <section class="post-meta">
 
-                {{#author}}
+                {{#primary_author}}
 
-                    {{#if image}}
+                    {{#if profile_image}}
                     <figure class="author-image">
-                        <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                        <a class="img" href="{{url}}" style="background-image: url({{img_url}})"><span class="hidden">{{name}}'s Picture</span></a>
                         <span class="name">{{name}}</span>
                     </figure>
                     {{/if}}
 
-                {{/author}}
+                {{/primary_author}}
 
                 <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
                 {{#if tags}}
